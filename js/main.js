@@ -24,6 +24,15 @@ document.addEventListener('DOMContentLoaded', function() {
         observer.observe(card);
     });
 
+    // Apply scroll animation to book cards too
+    const bookCards = document.querySelectorAll('.book-card');
+    bookCards.forEach((card, index) => {
+        card.style.opacity = '0';
+        card.style.transform = 'translateY(50px)';
+        card.style.transition = `all 0.6s ease ${index * 0.2}s`;
+        observer.observe(card);
+    });
+
     // Fun hover sounds simulation with visual feedback
     cards.forEach(card => {
         card.addEventListener('mouseenter', function() {
@@ -31,11 +40,17 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     });
 
-    // Add random cupcake emojis floating occasionally
-    function createFloatingCupcake() {
-        const cupcake = document.createElement('div');
-        cupcake.innerHTML = '🧁';
-        cupcake.style.cssText = `
+    // Add random floating emojis occasionally
+    function createFloatingEmoji() {
+        const emoji = document.createElement('div');
+        // Pick emoji based on which page we're on
+        const isBook2 = document.body.classList.contains('book2-page');
+        const isBookPicker = document.body.classList.contains('book-picker-page');
+        const emojis = isBook2 ? ['🐘', '💥', '⚡', '🔬'] :
+                       isBookPicker ? ['🧁', '🐘', '✨', '💥'] :
+                       ['🧁', '🧁', '🧁', '✨'];
+        emoji.innerHTML = emojis[Math.floor(Math.random() * emojis.length)];
+        emoji.style.cssText = `
             position: fixed;
             font-size: ${20 + Math.random() * 30}px;
             left: ${Math.random() * 100}vw;
@@ -44,9 +59,9 @@ document.addEventListener('DOMContentLoaded', function() {
             z-index: 9999;
             animation: floatUp 8s linear forwards;
         `;
-        document.body.appendChild(cupcake);
+        document.body.appendChild(emoji);
 
-        setTimeout(() => cupcake.remove(), 8000);
+        setTimeout(() => emoji.remove(), 8000);
     }
 
     // Add the float up animation
@@ -65,11 +80,11 @@ document.addEventListener('DOMContentLoaded', function() {
     `;
     document.head.appendChild(style);
 
-    // Create a floating cupcake every few seconds
-    setInterval(createFloatingCupcake, 4000);
+    // Create a floating emoji every few seconds
+    setInterval(createFloatingEmoji, 4000);
 
     // Create one immediately
-    setTimeout(createFloatingCupcake, 1000);
+    setTimeout(createFloatingEmoji, 1000);
 
     // Add click effect on character images
     const characterImages = document.querySelectorAll('.character-image');

@@ -472,3 +472,287 @@ body::before {
     transform: translate(-2px, -2px);
     box-shadow: 6px 6px 0 #2D2D2D;
 }
+
+/* =============================== */
+/* BOOK PICKER PAGE                */
+/* =============================== */
+
+.book-picker-page .hero {
+    min-height: 50vh;
+    padding-bottom: 30px;
+}
+
+.book-picker-section {
+    text-align: center;
+    padding: 60px 20px 80px;
+}
+
+.book-picker {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    flex-wrap: wrap;
+    margin-top: 40px;
+    max-width: 1000px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.book-card {
+    display: block;
+    text-decoration: none;
+    color: #2D2D2D;
+    width: 400px;
+    border-radius: 20px;
+    border: 5px solid #2D2D2D;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    overflow: hidden;
+    position: relative;
+}
+
+.book-card:hover {
+    transform: translate(-6px, -6px);
+}
+
+.book-card-inner {
+    padding: 40px 30px;
+    text-align: center;
+}
+
+.book-card-emojis {
+    font-size: 3rem;
+    margin-bottom: 15px;
+}
+
+.book-emoji {
+    display: inline-block;
+    animation: float 3s ease-in-out infinite;
+}
+
+.book-emoji-1 { animation-delay: 0s; }
+.book-emoji-2 { animation-delay: 0.3s; }
+.book-emoji-3 { animation-delay: 0.6s; }
+
+.book-card-number {
+    font-family: 'Bangers', cursive;
+    font-size: 1.2rem;
+    letter-spacing: 3px;
+    margin-bottom: 10px;
+    opacity: 0.8;
+}
+
+.book-card-title {
+    font-family: 'Bangers', cursive;
+    font-size: 2rem;
+    letter-spacing: 2px;
+    margin-bottom: 15px;
+    line-height: 1.2;
+}
+
+.book-card-desc {
+    font-family: 'Comic Neue', cursive;
+    font-size: 1.1rem;
+    line-height: 1.6;
+    margin-bottom: 25px;
+}
+
+.book-card-action {
+    font-family: 'Bangers', cursive;
+    font-size: 1.5rem;
+    padding: 12px 30px;
+    border-radius: 10px;
+    border: 3px solid #2D2D2D;
+    display: inline-block;
+    letter-spacing: 2px;
+    transition: all 0.2s ease;
+}
+
+/* Book 1 Card - Cupcake pink/purple theme */
+.book-card-1 {
+    background: linear-gradient(135deg, #F8BBD0, #CE93D8);
+    box-shadow: 8px 8px 0 #7B1FA2;
+}
+
+.book-card-1:hover {
+    box-shadow: 14px 14px 0 #7B1FA2;
+}
+
+.book-card-1 .book-card-number {
+    color: #7B1FA2;
+}
+
+.book-card-1 .book-card-title {
+    color: #4A148C;
+    text-shadow: 2px 2px 0 #F8BBD0;
+}
+
+.book-card-1 .book-card-desc {
+    color: #4A148C;
+}
+
+.book-card-1 .book-card-action {
+    background: #E91E63;
+    color: white;
+    box-shadow: 4px 4px 0 #880E4F;
+}
+
+.book-card-1:hover .book-card-action {
+    background: #C2185B;
+}
+
+/* Book 2 Card - Elephant dark red/grey theme */
+.book-card-2 {
+    background: linear-gradient(135deg, #BDBDBD, #EF9A9A);
+    box-shadow: 8px 8px 0 #B71C1C;
+}
+
+.book-card-2:hover {
+    box-shadow: 14px 14px 0 #B71C1C;
+}
+
+.book-card-2 .book-card-number {
+    color: #B71C1C;
+}
+
+.book-card-2 .book-card-title {
+    color: #B71C1C;
+    text-shadow: 2px 2px 0 #BDBDBD;
+}
+
+.book-card-2 .book-card-desc {
+    color: #3E2723;
+}
+
+.book-card-2 .book-card-action {
+    background: #D32F2F;
+    color: white;
+    box-shadow: 4px 4px 0 #7f0000;
+}
+
+.book-card-2:hover .book-card-action {
+    background: #B71C1C;
+}
+
+/* =============================== */
+/* BOOK 2 THEME                    */
+/* =============================== */
+
+.navbar-book2 {
+    background: linear-gradient(135deg, #616161, #B71C1C);
+    box-shadow: 0 4px 0 #4E342E, 0 8px 20px rgba(0,0,0,0.3);
+}
+
+.hero-book2 {
+    background: linear-gradient(180deg, #424242 0%, #757575 30%, #BDBDBD 60%, #FFF8E1 100%);
+}
+
+.title-container-book2 {
+    border-color: #B71C1C;
+    box-shadow: 10px 10px 0 #B71C1C;
+}
+
+.main-title-book2 {
+    color: #D32F2F;
+}
+
+.subtitle-book2 {
+    color: #9E9E9E;
+}
+
+.elephant-warning {
+    background: #B71C1C;
+    padding: 20px 40px;
+    border-radius: 15px;
+    border: 4px solid #2D2D2D;
+    box-shadow: 6px 6px 0 #2D2D2D;
+    transform: rotate(2deg);
+    margin-bottom: 30px;
+    animation: shake 0.5s ease-in-out infinite;
+}
+
+.warning-text-book2 {
+    color: #FFCDD2;
+}
+
+.floating-elephants {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+}
+
+.floating-emoji {
+    position: absolute;
+    font-size: 3rem;
+    animation: float 4s ease-in-out infinite;
+}
+
+.elephant-1 { top: 15%; left: 10%; animation-delay: 0s; }
+.elephant-2 { top: 25%; right: 15%; animation-delay: 0.5s; }
+.elephant-3 { top: 60%; left: 5%; animation-delay: 1s; }
+.elephant-4 { top: 70%; right: 10%; animation-delay: 1.5s; }
+.elephant-5 { top: 40%; right: 5%; animation-delay: 2s; }
+
+.characters-intro-book2 {
+    background: #BDBDBD;
+}
+
+.characters-intro-book2 .section-title {
+    text-shadow: 4px 4px 0 #D32F2F;
+}
+
+.footer-book2 {
+    border-top-color: #D32F2F;
+}
+
+/* Book 2 story teaser section */
+.book2-teaser {
+    text-align: center;
+    padding: 60px 20px;
+    background: linear-gradient(135deg, #FFEBEE, #FFCDD2);
+    border-top: 6px solid #2D2D2D;
+}
+
+.teaser-text {
+    font-family: 'Comic Neue', cursive;
+    font-size: 1.3rem;
+    line-height: 1.8;
+    color: #3E2723;
+    max-width: 700px;
+    margin: 20px auto 0;
+    font-weight: bold;
+}
+
+/* =============================== */
+/* RESPONSIVE - Book Picker        */
+/* =============================== */
+
+@media (max-width: 900px) {
+    .book-picker {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .book-card {
+        width: 90%;
+        max-width: 400px;
+    }
+
+    .book-card-title {
+        font-size: 1.6rem;
+    }
+}
+
+@media (max-width: 600px) {
+    .book-card-title {
+        font-size: 1.4rem;
+    }
+
+    .book-card-emojis {
+        font-size: 2rem;
+    }
+
+    .book-card-inner {
+        padding: 25px 20px;
+    }
+}
